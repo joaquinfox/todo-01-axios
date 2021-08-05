@@ -5,7 +5,6 @@ const BASE = `https://jsonplaceholder.typicode.com/`;
 const getTodoList = async () => {
   const response = await axios.get(`${BASE}todos/?_limit=5`);
   const todoList = response.data;
-  //   console.log(todoList);
   return todoList;
 };
 
@@ -14,11 +13,9 @@ const buildNode = (item) => {
   const newLi = document.createElement("li");
   newLi.append(item.title);
   newLi.addEventListener("click", async (e) => {
-    // console.log(e.target.id);
 
     deleteElementFromApi(e.target.id);
     deleteElementFromDOM(e.target);
-    // console.log("parent node", newLi.parentNode);
   });
   return newLi;
 };
