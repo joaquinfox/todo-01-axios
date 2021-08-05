@@ -18,7 +18,7 @@ section {
   margin: auto;
 }
 section {
-  width: 60%;
+  width: 20%;
 }
 ul {
   border: solid 1px aliceblue;
@@ -26,4 +26,17 @@ ul {
 ul > li {
   list-style: none;
   line-height: 2;
+  margin-top: 2%;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    width: 50%;
+  }
 }
